@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Quizzer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    #container {
+      width: 1000px;
+      margin: auto;
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+    }
+    /* Header */
+    #header {
+      height: 60px;
+      background-color: pink;
+      text-align: center;
+      line-height: 60px;
+    }
+    #header h1 {
+      font-size: 24px;
+      color: #333;
+    }
+    /* Menu */
+    #menu {
+      height: 40px;
+      background-color: gainsboro;
+      text-align: center;
+      line-height: 40px;
+    }
+    #menu a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+    }
+    #menu a:hover {
+      color: darkblue;
+    }
+    /* Body content layout */
+    #body-content {
+      display: flex;
+      min-height: 600px;
+    }
+    /* Left */
+    #left-body-content {
+      background-color: beige;
+      width: 180px;
+      padding: 10px;
+    }
+    #left-body-content ul li {
+      list-style-type: none;
+      font-size: 16px;
+      padding: 8px 0;
+    }
+    #left-body-content a {
+      text-decoration: none;
+      color: black;
+    }
+    #left-body-content a:hover {
+      color: darkred;
+    }
+    /* Center */
+    #center-body-content {
+      background-color: white;
+      width: 640px;
+      padding: 20px;
+      overflow-y: auto;
+    }
+    #center-body-content h3 {
+      margin: 15px 0 5px;
+    }
+    #center-body-content b {
+      display: block;
+      margin-bottom: 10px;
+    }
+    #center-body-content input[type="text"] {
+      width: 95%;
+      padding: 6px;
+      margin: 5px 0 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    #center-body-content input[type="radio"],
+    #center-body-content input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    #center-body-content hr {
+      margin: 15px 0;
+    }
+    #center-body-content button {
+      margin-top: 15px;
+      padding: 8px 20px;
+      background: greenyellow;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    #center-body-content button:hover {
+      background: #5a2da8;
+    }
+    /* Right */
+    #right-body-content {
+      background-color: silver;
+      width: 180px;
+      padding: 10px;
+    }
+    /* Footer */
+    #footer {
+      background-color: grey;
+      height: 80px;
+      text-align: center;
+      color: white;
+      line-height: 80px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+  
+    <div id="header">
+      <h1>HTML Quizzer</h1>
+    </div>
+
+   
+    <div id="menu">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+
+    
+    <div id="body-content">
+      
+      <div id="left-body-content">
+        <ul>
+          <li><a href="#">Text Type</a></li>
+          <li><a href="#">Radio Type</a></li>
+          <li><a href="#">Checkbox Type</a></li>
+        </ul>
+      </div>
+
+     
+      <div id="center-body-content">
+        <form>
+          <h3>Text Type</h3>
+          <b>INSTRUCTION: Enumerate what is being asked</b>
+          1. What is the meaning of the acronym "HTML"?<br>
+          <input type="text"><br>
+          2. What tag/attribute do you use to add a table in a website?<br>
+          <input type="text"><br>
+          3. Give an example of a font-family property.<br>
+          <input type="text"><br>
+          4. Give an example of a font-style property.<br>
+          <input type="text"><br>
+          <hr>
+
+          <h3>Radio Type</h3>
+          <b>INSTRUCTION: Choose what best describes the question</b>
+          5. Which html tag defines an ordered list?<br>
+          <input type="radio" name="q5">ol<br>
+          <input type="radio" name="q5">ul<br>
+          <input type="radio" name="q5">li<br><br>
+
+          6. Which html tag defines an unordered list?<br>
+          <input type="radio" name="q6">ol<br>
+          <input type="radio" name="q6">ul<br>
+          <input type="radio" name="q6">dl<br><br>
+
+          7. Which html tag defines a definition list?<br>
+          <input type="radio" name="q7">dl<br>
+          <input type="radio" name="q7">li<br>
+          <input type="radio" name="q7">ol<br>
+          <hr>
+
+          <h3>Checkbox Type</h3>
+          <b>INSTRUCTION: Choose what tag is included in the given</b>
+          8. Only select the TABLE TAGS.<br>
+          <input type="checkbox" name="q8">ol
+          <input type="checkbox" name="q8">ul
+          <input type="checkbox" name="q8">br
+          <input type="checkbox" name="q8">tags
+          <input type="checkbox" name="q8">table
+          <input type="checkbox" name="q8">tr<br><br>
+
+          9. Only select the LIST TAGS.<br>
+          <input type="checkbox" name="q9">ol
+          <input type="checkbox" name="q9">ul
+          <input type="checkbox" name="q9">li
+          <input type="checkbox" name="q9">tags
+          <input type="checkbox" name="q9">table
+          <input type="checkbox" name="q9">br<br><br>
+
+          10. Only select the IMAGE TAGS.<br>
+          <input type="checkbox" name="q10">img
+          <input type="checkbox" name="q10">ul
+          <input type="checkbox" name="q10">map
+          <input type="checkbox" name="q10">area
+          <input type="checkbox" name="q10">table
+          <input type="checkbox" name="q10">br<br><br>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div id="right-body-content">
+        <h3>Notes</h3>
+        <p>Kunware advertisments ditoy</p>
+      </div>
+    </div>
+
+    <div id="footer">
+      <h2>Footer daytoy </h2>
+    </div>
+  </div>
+</body>
+</html>
